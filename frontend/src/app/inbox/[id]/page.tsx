@@ -18,7 +18,9 @@ export default function MessagePage() {
   const message = data?.data;
 
   useEffect(() => {
-    document.title = `${message?.subject} | MBL Mailer`;
+    if (message) {
+      document.title = `${message?.subject} | MBL Mailer`;
+    }
   }, [message])
 
   return (
