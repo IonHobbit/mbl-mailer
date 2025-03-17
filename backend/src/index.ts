@@ -3,7 +3,7 @@ import config, { validateConfig } from "./config.util";
 import db from "./db";
 
 validateConfig();
-const port = config.PORT;
+const port = config.PORT || 3001;
 
 db.connect();
 
